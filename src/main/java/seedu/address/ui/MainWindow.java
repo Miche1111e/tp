@@ -134,6 +134,11 @@ public class MainWindow extends UiPart<Stage> {
         if (!helpWindow.isShowing()) {
             helpWindow.show();
         } else {
+            // Restore the Help window if it's minimized
+            Stage helpStage = helpWindow.getStage();
+            if (helpStage.isIconified()) {
+                helpStage.setIconified(false);
+            }
             helpWindow.focus();
         }
 

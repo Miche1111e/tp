@@ -54,4 +54,8 @@ public class HelpWindow extends UiPart<Stage> {
     public void focus() {
         getRoot().requestFocus();
     }
+
+    public Stage getStage() {
+        return getRoot();
+    }
 }
